@@ -1,0 +1,49 @@
+#########################################################################
+# Filename: keywords.sample
+# Description: Keywords Capture Filter for SpicyMango
+# Copyright (C) 2011-2012 Chris Centore
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or any later 
+#    version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+# SpicyMango written by: Chris Centore, Steve Swann, Jason Gunnoe
+# Website: http://code.google.com/p/spicymango/
+# Download: svn co http://spicymango.googlecode.com/svn/trunk/ spicymango/
+#
+#########################################################################
+
+#########################################################################
+# 
+# The first item is the module name. The second item is the keyword term 
+# or phrase.
+# Example: ['mod_irc','keyword']
+# 
+# Multiple search lines per module are permissable.
+#
+#########################################################################
+
+# mod_irc uses regular expressions for keyword terms
+['mod_irc','.*']
+
+# mod_twitter uses the search operators in the Twitter API
+['mod_twitter','spicy']
+
+# mod_facebook queries the Facebook graph API
+['mod_facebook','spicy']
+
+# mod_gmail downloads individual mailboxes/labels for each keyword.
+# For example, to download all of the starred email messages choose 
+# [Gmail]/Starred, for the inbox choose "Inbox". Setup filters in
+# your gmail account prior to using this. 
+# ['mod_gmail', 'Inbox']
+# ['mod_gmail', '[Gmail]/Starred']

@@ -1,0 +1,124 @@
+#########################################################################
+# Filename: config.sample
+# Description: Configuration File for SpicyMango
+# Copyright (C) 2011-2012 Chris Centore
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or any later 
+#    version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+# SpicyMango written by: Chris Centore, Steve Swann, Jason Gunnoe
+# Website: http://code.google.com/p/spicymango/
+# Download: svn co http://spicymango.googlecode.com/svn/trunk/ spicymango/
+#
+#########################################################################
+
+# Global Configuration Options
+#########################################################################
+# Enable and configure the web view
+WEB_VIEW=ON
+WEB_VIEW_IP="127.0.0.1"
+WEB_VIEW_PORT=8080
+
+
+# MOD_IRC by: Chris Centore
+# Collects data from IRC channels
+#########################################################################
+# Enable IRC module
+MOD_IRC=OFF
+
+# IRC Server
+MOD_IRC_SERVER="irc.freenode.com"
+
+# IRC Channel(s): Seperate channels with a comma. (i.e. "spicymango","anotherchannel")
+MOD_IRC_CHANNELS="spicymango","spicychan43"
+
+# IRC User
+MOD_IRC_USER="spicybot"
+
+
+# MOD_TWITTER by: Jason Gunnoe
+# Searches Twitter using its API
+#########################################################################
+# Enable Twitter module
+MOD_TWITTER=OFF
+
+# How many post to query at a time
+MOD_TWITTER_COUNT=5
+
+# Set the interval (in seconds) that MOD_TWITTER will query the api; Increase if using many keyword terms.
+MOD_TWITTER_INTERVAL=15
+
+
+# MOD_FACEBOOK by: Jason Gunnoe
+# Searches Facebook using its graph API
+#########################################################################
+# Enable Facebook search module
+MOD_FACEBOOK=OFF
+#
+# Set the interval (in seconds) that MOD_TWITTER will query the api
+MOD_FACEBOOK_INTERVAL=30
+
+
+# MOD_RSS by: AntiTree
+# # Download RSS feeds from a supplied list
+# #########################################################################
+# # Enable RSS  module
+MOD_RSS=OFF
+# #
+# # Set the interval (in seconds) that MOD_RSS will query the api
+MOD_RSS_INTERVAL=86400
+#
+
+
+# MOD_GMAIL by: AntiTree
+# Download gmail messages via IMAP
+########################################################################
+# Enable Gmail module
+MOD_GMAIL=OFF
+# Set interval in seconds at which new messages are checked
+MOD_GMAIL_INTERVAL=600
+# Gmail address
+MOD_GMAIL_EMAIL=""
+# Gmail password (Beware insecure!)
+MOD_GMAIL_PASSWORD=""
+#
+
+# Tor Options
+########################################################################
+# Host where Tor is running
+TOR_HOST="localhost"
+# Standard SOCKS port tor is listening on
+TOR_PORT=9050
+# Tor Control Port. Must be enabled in the "torrc" file first
+TOR_CTL_PORT=9051
+# Tor control port password
+TOR_PASS=""
+#
+
+
+# Output Options
+#########################################################################
+# If no output destination is enabled, output goes to the console.
+
+# Output to Sqlite3 Database
+OUTPUT_SQLITE3=ON
+# Specify output DB file path
+OUTPUT_SQLITE3_DB_PATH="sm_output.db"
+
+# Output to file
+OUTPUT_FILE=OFF
+# Specify FULL output file path
+OUTPUT_FILE_NAME="/path/to/outputfile"
+
+# Output to the console (Default if no output is enabled)
+OUTPUT_CONSOLE=OFF
